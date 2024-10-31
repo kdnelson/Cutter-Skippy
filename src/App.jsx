@@ -8,8 +8,9 @@ const App = () => {
   const MEDIUM_MIN_MEDIA_WIDTH = 768;
   const SMALL_MIN_MEDIA_WIDTH = 576;  
   const X_SMALL_MIN_MEDIA_WIDTH = 515;
-  const XX_SMALL_MIN_MEDIA_WIDTH = 470;
-  const XXX_SMALL_MIN_MEDIA_WIDTH = 320;
+  const XX_SMALL_MIN_MEDIA_WIDTH = 450;
+  const XXX_SMALL_MIN_MEDIA_WIDTH = 365;
+  const XXXX_SMALL_MIN_MEDIA_WIDTH = 320;
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const App = () => {
         </div>
       </div>
 
+      <div>{screenSize >= XXXX_SMALL_MIN_MEDIA_WIDTH && screenSize < XXX_SMALL_MIN_MEDIA_WIDTH && (<div className="media-size-xxxx-small"><Cutter /></div>)}</div>
       <div>{screenSize >= XXX_SMALL_MIN_MEDIA_WIDTH && screenSize < XX_SMALL_MIN_MEDIA_WIDTH && (<div className="media-size-xxx-small"><Cutter /></div>)}</div>
       <div>{screenSize >= XX_SMALL_MIN_MEDIA_WIDTH && screenSize < X_SMALL_MIN_MEDIA_WIDTH && (<div className="media-size-xx-small"><Cutter /></div>)}</div>
       <div>{screenSize >= X_SMALL_MIN_MEDIA_WIDTH && screenSize < SMALL_MIN_MEDIA_WIDTH && (<div className="media-size-x-small"><Cutter /></div>)}</div>
